@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: ${MONGODB_DATABASE_URL:mongodb://localhost:27017/NoSQL}
+      uri: mongodb+srv://diegocarrasco1013:609633640@cluster0.oqhwyov.mongodb.net/test?retryWrites=true&w=majority
       auto-index-creation: true
-springdoc:
-  pathsToMatch: /api/**
+  doc:
+    pathsToMatch: /api/**
