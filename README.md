@@ -1,66 +1,8 @@
 # NoSQL
 
-This app was created with Bootify.io - tips on working with the code [can be found here](https://bootify.io/next-steps/).
-Feel free to contact us for further questions.
+# Repositorio : https://github.com/DiegoCG1013/NoSQL/tree/master
 
-## Development
-
-Update your local database connection in `application.yml` or create your own `application-local.yml` file to override
-settings for development.
-
-During development it is recommended to use the profile `local`. In IntelliJ `-Dspring.profiles.active=local` can be
-added in the VM options of the Run Configuration after enabling this property in "Modify options".
-
-Lombok must be supported by your IDE. For IntelliJ install the Lombok plugin and enable annotation processing -
-[learn more](https://bootify.io/next-steps/spring-boot-with-lombok.html).
-
-In addition to the Spring Boot application, the DevServer must also be started. [Node.js](https://nodejs.org/) has to be
-available on the system - the latest LTS version is recommended. On first usage and after updates the dependencies have to be installed:
-
-```
-npm install
-```
-
-The DevServer can now be started as follows:
-
-```
-npm run devserver
-```
-
-Using a proxy the whole application is now accessible under `localhost:8081`. All changes to the templates and JS/CSS
-files are immediately visible in the browser.
-
-## Build
-
-The application can be built using the following command:
-
-```
-mvnw clean package
-```
-
-Node.js is automatically downloaded using the `frontend-maven-plugin` and the final JS/CSS files are integrated into the jar.
-
-Start your application with the following command - here with the profile `production`:
-
-```
-java -Dspring.profiles.active=production -jar ./target/NoSQL-0.0.1-SNAPSHOT.jar
-```
-
-If required, a Docker image can be created with the Spring Boot plugin. Add `SPRING_PROFILES_ACTIVE=production` as
-environment variable when running the container.
-
-```
-mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=io.bootify/no-s-q-l
-```
-
-## Further readings
-
-* [Maven docs](https://maven.apache.org/guides/index.html)  
-* [Spring Boot reference](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)  
-* [Spring Data MongoDB reference](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/)  
-* [Thymeleaf docs](https://www.thymeleaf.org/documentation.html)  
-* [Webpack concepts](https://webpack.js.org/concepts/)  
-* [npm docs](https://docs.npmjs.com/)  
-* [Bootstrap docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/)  
-* [Htmx in a nutshell](https://htmx.org/docs/)  
-* [Learn Spring Boot with Thymeleaf](https://www.wimdeblauwe.com/books/taming-thymeleaf/)  
+Proyecto hecho con bootify, usando la base de datos de Mongo Atlas, con un dataset de kaggle con la tematica de aplicaciones de la play store.
+Lo mas complicado es que no sabia como hace rpara que encajaran los objetos que hacia con los de el dataset, finalmente, con python, hice un poco de tratamiento de los datos para que todo encajara.
+Finalmente he intentado cambiar el codigo, para añadir mas cosas, al final solo he podido añadir una funcion y modificar otra para que no salga toda la base de datos por pantalla, solo 100 de los datos, la funcion que hice yo era para que se mostraran todos, pero no he conseguido implementarla, ya que cada vez que toco algo se me rompe la app o no pasa nada.
+El plan era ponerle una especie de filtro para que se pudiera poner segun que atributo ordenarlo, y mostrar los 100 primeros.
