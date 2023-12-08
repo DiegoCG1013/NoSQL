@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_DATABASE_URL:mongodb://localhost:27017/NoSQL}
+      auto-index-creation: true
+springdoc:
+  pathsToMatch: /api/**

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+    <head>
+        <title>[[#{app.edit.headline}]]</title>
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <div class="d-flex flex-wrap mb-4">
+                <h1 class="flex-grow-1">[[#{app.edit.headline}]]</h1>
+                <div>
+                    <a th:href="@{/apps}" class="btn btn-secondary">[[#{app.edit.back}]]</a>
+                </div>
+            </div>
+            <div th:replace="~{fragments/forms::globalErrors('app')}" />
+            <form th:action="${requestUri}" method="post">
+                <div th:replace="~{fragments/forms::inputRow(object='app', field='app', disabled=true)}" />
+                <div th:replace="~{fragments/forms::inputRow(object='app', field='category')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='app', field='rating')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='app', field='reviews')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='app', field='size')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='app', field='installs')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='app', field='type')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='app', field='price')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='app', field='contentRating')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='app', field='genres')}" />
+                <input type="submit" th:value="#{app.edit.headline}" class="btn btn-primary mt-4" />
+            </form>
+        </div>
+    </body>
+</html>
