@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://diegocarrasco1013:609633640@cluster0.oqhwyov.mongodb.net/test?retryWrites=true&w=majority
+      uri: mongodb+srv://user:1234@cluster0.oqhwyov.mongodb.net/Apps?retryWrites=true&w=majority
       auto-index-creation: true
   doc:
     pathsToMatch: /api/**

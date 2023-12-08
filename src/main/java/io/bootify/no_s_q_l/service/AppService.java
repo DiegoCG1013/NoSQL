@@ -19,7 +19,15 @@ public class AppService {
     }
 
     public List<AppDTO> findAll() {
-        final List<App> apps = appRepository.findAll(Sort.by("app"));
+        final List<App> apps = appRepository.findAll(Sort.by("installs").descending());
+        return apps.stream()
+                .limit(100)
+                .map(app -> mapToDTO(app, new AppDTO()))
+                .toList();
+    }
+
+    public List<AppDTO> findAll2() {
+        final List<App> apps = appRepository.findAll(Sort.by("installs").descending());
         return apps.stream()
                 .map(app -> mapToDTO(app, new AppDTO()))
                 .toList();

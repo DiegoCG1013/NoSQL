@@ -36,6 +36,11 @@ public class AppResource {
         return ResponseEntity.ok(appService.findAll());
     }
 
+    @GetMapping("/all")
+    public ResponseEntity<List<AppDTO>> getAllApps2() {
+        return ResponseEntity.ok(appService.findAll2());
+    }
+
     @GetMapping("/{app}")
     public ResponseEntity<AppDTO> getApp(@PathVariable(name = "app") final String app) {
         return ResponseEntity.ok(appService.get(app));
